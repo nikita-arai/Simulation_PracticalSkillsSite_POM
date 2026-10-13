@@ -13,11 +13,11 @@ export class BookModal {
   readonly titleError: Locator;
 
   // --- TODO: 以下のロケーターを追加してください ---
-  readonly authorSelect: Locator;    // test-id: book-author-input
-  readonly ratingSelect: Locator;    // test-id: book-rating-input
-  readonly pagesInput: Locator;      // test-id: book-pages-input
-  readonly noteInput: Locator;       // test-id: book-note-input
-  readonly wishlistButton: Locator;  // test-id: modal-wishlist
+  // readonly authorSelect: Locator;    // test-id: book-author-input
+  // readonly ratingSelect: Locator;    // test-id: book-rating-input
+  // readonly pagesInput: Locator;      // test-id: book-pages-input
+  // readonly noteInput: Locator;       // test-id: book-note-input
+  // readonly wishlistButton: Locator;  // test-id: modal-wishlist
 
   constructor(page: Page) {
     this.page = page;
@@ -32,11 +32,11 @@ export class BookModal {
     this.titleError   = page.locator('#book-title-error');
 
     // TODO: 以下のロケーターを初期化してください
-    this.authorSelect  = page.getByTestId('book-author-input');
-    this.ratingSelect  = page.getByTestId('book-rating-input');
-    this.pagesInput    = page.getByTestId('book-pages-input');
-    this.noteInput     = page.getByTestId('book-note-input');
-    this.wishlistButton = page.getByTestId('modal-wishlist');
+    // this.authorSelect  = ???;
+    // this.ratingSelect  = ???;
+    // this.pagesInput    = ???;
+    // this.noteInput     = ???;
+    // this.wishlistButton = ???;
   }
 
   // --- 提供済みメソッド ---
@@ -68,27 +68,17 @@ export class BookModal {
   // --- TODO: 以下のメソッドを実装してください ---
 
   // TODO Q1: 著者を選択する
-  async selectAuthor(author: string) {
-    await this.authorSelect.selectOption(author);
-  }
+  // async selectAuthor(author: string) { ... }
 
   // TODO Q2: 評価を選択する（1〜5）
-  async selectRating(rating: number) { 
-    await this.ratingSelect.selectOption(rating.toString());
-  }
+  // async selectRating(rating: number) { ... }
 
   // TODO Q3: ページ数を入力する
-  async fillPages(pages: string) {
-    await this.pagesInput.fill(pages);
-  }
+  // async fillPages(pages: string) { ... }
 
   // TODO Q4: メモを入力する
-  async fillNote(note: string) {
-    await this.noteInput.fill(note)
-  }
+  // async fillNote(note: string) { ... }
 
   // TODO Q5: ウィッシュリストとして保存する（ステータスが強制的に「未読」になる）
-  async saveWishlist() {
-    await this.wishlistButton.click();
-  }
+  // async saveWishlist() { ... }
 }
